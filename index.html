@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BETH BITES — Authentic Nigerian, African & Intercontinental dishes, pastries, drinks and ice cream. Serving since 2016. Home delivery available. Call 09032960035." />
+  <meta name="theme-color" content="#B22222" />
+  <title>BETH BITES | Nigerian, African &amp; Intercontinental Cuisine</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===================== INTERNAL CSS ===================== -->
+  <style>
+    :root{
+      --bb-red:        #B22222;
+      --bb-red-dark:   #8E1A1A;
+      --bb-cream:      #FFF8E7;
+      --bb-gold:       #F4B400;
+      --bb-text:       #333333;
+      --bb-muted:      #6d6d6d;
+      --bb-dark:       #241111;
+      --bb-radius:     18px;
+      --bb-shadow:     0 12px 34px rgba(51,51,51,.08);
+      --bb-shadow-lg:  0 22px 55px rgba(51,51,51,.16);
+    }
+
+    *{ box-sizing:border-box; }
+
+    html{ scroll-behavior:smooth; }
+
+    body{
+      background-color:var(--bb-cream);
+      color:var(--bb-text);
+      font-family:'Poppins', system-ui, -apple-system, sans-serif;
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3,h4,h5,.font-display{
+      font-family:'Playfair Display', Georgia, serif;
+      font-weight:700;
+      color:var(--bb-text);
+    }
+
+    a{ text-decoration:none; }
+    img{ max-width:100%; }
+
+    section{ padding:88px 0; }
+
+    /* ---------------- Buttons ---------------- */
+    .btn{
+      border-radius:50px;
+      font-weight:600;
+      padding:.75rem 1.7rem;
+      letter-spacing:.3px;
+      transition:all .3s ease;
+    }
+    .btn-bb{
+      background:var(--bb-red);
+      border:2px solid var(--bb-red);
+      color:#fff;
+    }
+    .btn-bb:hover,
+    .btn-bb:focus{
+      background:var(--bb-red-dark);
+      border-color:var(--bb-red-dark);
+      color:#fff;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(178,34,34,.32);
+    }
+    .btn-bb-outline{
+      background:transparent;
+      border:2px solid var(--bb-red);
+      color:var(--bb-red);
+    }
+    .btn-bb-outline:hover,
+    .btn-bb-outline:focus{
+      background:var(--bb-red);
+      color:#fff;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(178,34,34,.28);
+    }
+    .btn-gold{
+      background:var(--bb-gold);
+      border:2px solid var(--bb-gold);
+      color:#3a2a00;
+    }
+    .btn-gold:hover,
+    .btn-gold:focus{
+      background:#d99f00;
+      border-color:#d99f00;
+      color:#3a2a00;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(244,180,0,.38);
+    }
+    .btn-ghost-light{
+      background:transparent;
+      border:2px solid rgba(255,255,255,.8);
+      color:#fff;
+    }
+    .btn-ghost-light:hover,
+    .btn-ghost-light:focus{
+      background:#fff;
+      border-color:#fff;
+      color:var(--bb-red);
+      transform:translateY(-3px);
+    }
+
+    /* ---------------- Top bar ---------------- */
+    .bb-topbar{
+      background:var(--bb-dark);
+      color:#f3e7d2;
+      font-size:.84rem;
+      padding:.55rem 0;
+    }
+    .bb-topbar a{ color:#f3e7d2; transition:color .25s ease; }
+    .bb-topbar a:hover{ color:var(--bb-gold); }
+    .bb-topbar i{ color:var(--bb-gold); }
+
+    /* ---------------- Navbar ---------------- */
+    .bb-navbar{
+      background:rgba(255,248,231,.96);
+      backdrop-filter:blur(10px);
+      padding:.85rem 0;
+      transition:padding .3s ease, box-shadow .3s ease;
+    }
+    .bb-navbar.scrolled{
+      padding:.45rem 0;
+      box-shadow:0 6px 24px rgba(51,51,51,.10);
+    }
+    .navbar-brand{
+      font-family:'Playfair Display', serif;
+      font-weight:800;
+      font-size:1.55rem;
+      letter-spacing:.5px;
+      color:var(--bb-text);
+      line-height:1;
+    }
+    .navbar-brand:hover{ color:var(--bb-text); }
+    .brand-beth{ color:var(--bb-red); }
+    .brand-bites{ color:var(--bb-gold); }
+    .brand-sub{
+      display:block;
+      font-family:'Poppins',sans-serif;
+      font-size:.58rem;
+      letter-spacing:3.5px;
+      text-transform:uppercase;
+      color:var(--bb-muted);
+      font-weight:500;
+      margin-top:3px;
+    }
+    .bb-navbar .nav-link{
+      color:var(--bb-text);
+      font-weight:500;
+      font-size:.96rem;
+      margin:0 .3rem;
+      padding:.5rem .35rem;
+      position:relative;
+    }
+    .bb-navbar .nav-link::after{
+      content:'';
+      position:absolute;
+      left:.35rem;
+      bottom:.28rem;
+      width:0;
+      height:2px;
+      background:var(--bb-gold);
+      border-radius:2px;
+      transition:width .3s ease;
+    }
+    .bb-navbar .nav-link:hover::after,
+    .bb-navbar .nav-link.active::after{ width:calc(100% - .7rem); }
+    .bb-navbar .nav-link.active{ color:var(--bb-red); font-weight:600; }
+    .navbar-toggler{ border:none; padding:.35rem .5rem; }
+    .navbar-toggler:focus{ box-shadow:none; }
+    .navbar-toggler i{ font-size:1.7rem; color:var(--bb-red); }
+
+    /* ---------------- Hero ---------------- */
+    .bb-hero{
+      position:relative;
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      padding:130px 0 90px;
+      color:#fff;
+      background-color:var(--bb-dark);
+      background-image:
+        linear-gradient(rgba(24,10,6,.74), rgba(24,10,6,.62)),
+        url('static/images/hero.jpg');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .bb-hero h1{
+      color:#fff;
+      font-size:clamp(2.1rem, 5vw, 3.9rem);
+      line-height:1.14;
+      margin-bottom:1.1rem;
+    }
+    .hero-gold{ color:var(--bb-gold); }
+    .bb-hero p.lead{
+      color:#f0e5d3;
+      font-size:1.05rem;
+      max-width:620px;
+      font-weight:300;
+    }
+    .bb-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      background:rgba(244,180,0,.16);
+      border:1px solid rgba(244,180,0,.55);
+      color:var(--bb-gold);
+      padding:.4rem 1.05rem;
+      border-radius:50px;
+      font-size:.78rem;
+      font-weight:600;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .hero-meta{
+      border-top:1px solid rgba(255,255,255,.18);
+      margin-top:2.6rem;
+      padding-top:1.6rem;
+    }
+    .hero-meta .item{
+      display:flex;
+      align-items:center;
+      gap:.65rem;
+      color:#efe3d0;
+      font-size:.9rem;
+    }
+    .hero-meta .item i{ color:var(--bb-gold); font-size:1.25rem; }
+
+    /* ---------------- Section titles ---------------- */
+    .section-title{ margin-bottom:3rem; }
+    .section-title .eyebrow{
+      display:inline-block;
+      color:var(--bb-red);
+      font-weight:600;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      font-size:.76rem;
+      margin-bottom:.6rem;
+    }
+    .section-title h2{
+      font-size:clamp(1.75rem, 3.6vw, 2.65rem);
+      margin-bottom:.6rem;
+    }
+    .section-title .divider{
+      width:72px;
+      height:4px;
+      background:var(--bb-gold);
+      border-radius:4px;
+      margin:.8rem auto 1.1rem;
+    }
+    .section-title.text-start .divider{ margin-left:0; }
+    .section-title p{
+      color:var(--bb-muted);
+      max-width:660px;
+      margin:0 auto;
+    }
+    .section-title.text-start p{ margin-left:0; }
+
+    /* ---------------- Cards ---------------- */
+    .bb-card{
+      background:#fff;
+      border:1px solid rgba(51,51,51,.07);
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      height:100%;
+      overflow:hidden;
+    }
+    .bb-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--bb-shadow-lg);
+      border-color:rgba(244,180,0,.55);
+    }
+    .icon-circle{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--bb-red), var(--bb-red-dark));
+      color:var(--bb-gold);
+      font-size:1.7rem;
+      flex:0 0 auto;
+    }
+    .icon-circle.sm{ width:48px; height:48px; font-size:1.25rem; }
+
+    /* ---------------- Dish cards ---------------- */
+    .dish-img{
+      position:relative;
+      overflow:hidden;
+      aspect-ratio:4 / 3;
+      background:#efe4cf;
+    }
+    .dish-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .65s ease;
+    }
+    .bb-card:hover .dish-img img{ transform:scale(1.08); }
+    .dish-price{
+      position:absolute;
+      right:12px;
+      bottom:12px;
+      background:var(--bb-red);
+      color:#fff;
+      font-weight:600;
+      font-size:.84rem;
+      padding:.3rem .85rem;
+      border-radius:50px;
+      box-shadow:0 6px 16px rgba(0,0,0,.25);
+    }
+    .dish-tag{
+      position:absolute;
+      left:12px;
+      top:12px;
+      background:var(--bb-gold);
+      color:#3a2a00;
+      font-weight:600;
+      font-size:.72rem;
+      letter-spacing:.4px;
+      padding:.25rem .75rem;
+      border-radius:50px;
+    }
+
+    /* ---------------- About ---------------- */
+    .about-img-wrap{
+      position:relative;
+      padding:0 0 22px 22px;
+    }
+    .about-img-wrap::before{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:72%;
+      height:72%;
+      background:var(--bb-gold);
+      opacity:.28;
+      border-radius:var(--bb-radius);
+    }
+    .about-img-wrap img{
+      position:relative;
+      width:100%;
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow-lg);
+      object-fit:cover;
+    }
+    .ceo-badge{
+      position:absolute;
+      right:-6px;
+      bottom:34px;
+      background:#fff;
+      border-radius:14px;
+      padding:.85rem 1.15rem;
+      box-shadow:var(--bb-shadow-lg);
+      border-left:5px solid var(--bb-gold);
+      max-width:230px;
+    }
+    .ceo-badge strong{ display:block; font-family:'Playfair Display',serif; font-size:1.02rem; }
+    .ceo-badge span{ font-size:.78rem; color:var(--bb-muted); }
+    .check-list{ list-style:none; padding:0; margin:0; }
+    .check-list li{
+      display:flex;
+      gap:.7rem;
+      align-items:flex-start;
+      margin-bottom:.7rem;
+      color:var(--bb-text);
+    }
+    .check-list i{ color:var(--bb-gold); font-size:1.15rem; margin-top:.2rem; }
+
+    /* ---------------- Stats ---------------- */
+    .bb-stats{
+      background:linear-gradient(135deg, var(--bb-red) 0%, var(--bb-red-dark) 100%);
+      color:#fff;
+      padding:70px 0;
+    }
+    .bb-stats i{ color:var(--bb-gold); font-size:2rem; }
+    .bb-stats .num{
+      font-family:'Playfair Display', serif;
+      font-size:clamp(2rem, 4vw, 2.8rem);
+      font-weight:800;
+      color:#fff;
+      line-height:1;
+      margin:.6rem 0 .35rem;
+    }
+    .bb-stats .label{
+      color:#ffe9c9;
+      font-size:.9rem;
+      letter-spacing:.5px;
+    }
+
+    /* ---------------- Testimonials ---------------- */
+    .quote-card{
+      background:#fff;
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      padding:2.2rem 1.9rem;
+      height:100%;
+      border-top:4px solid var(--bb-gold);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    .quote-card:hover{ transform:translateY(-6px); box-shadow:var(--bb-shadow-lg); }
+    .quote-card .bi-quote{ font-size:2.4rem; color:var(--bb-gold); line-height:1; }
+    .quote-card p{ color:var(--bb-muted); font-size:.95rem; }
+    .stars i{ color:var(--bb-gold); font-size:.9rem; }
+    .avatar{
+      width:48px; height:48px;
+      border-radius:50%;
+      background:var(--bb-red);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-weight:600;
+      font-family:'Playfair Display',serif;
+      font-size:1.1rem;
+    }
+
+    /* ---------------- CTA band ---------------- */
+    .bb-cta{
+      background:linear-gradient(135deg, rgba(178,34,34,.96), rgba(142,26,26,.96)),
+                 url('static/images/cta-bg.jpg') center/cover no-repeat;
+      background-color:var(--bb-red);
+      color:#fff;
+      border-radius:var(--bb-radius);
+      padding:3.2rem 2.2rem;
+      box-shadow:var(--bb-shadow-lg);
+    }
+    .bb-cta h2{ color:#fff; font-size:clamp(1.6rem,3.4vw,2.3rem); }
+    .bb-cta p{ color:#ffe6cd; }
+
+    /* ---------------- Footer ---------------- */
+    .bb-footer{
+      background:var(--bb-dark);
+      color:#cfc3b3;
+      padding:72px 0 0;
+      font-size:.93rem;
+    }
+    .bb-footer h5{
+      color:#fff;
+      font-size:1.05rem;
+      margin-bottom:1.2rem;
+      letter-spacing:.4px;
+    }
+    .bb-footer a{ color:#cfc3b3; transition:color .25s ease, padding-left .25s ease; }
+    .bb-footer a:hover{ color:var(--bb-gold); }
+    .bb-footer .footer-links a:hover{ padding-left:6px; }
+    .bb-footer .bi{ color:var(--bb-gold); }
+    .footer-social a{
+      width:42px; height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.08);
+      color:var(--bb-gold);
+      font-size:1.05rem;
+      transition:all .3s ease;
+    }
+    .footer-social a:hover{
+      background:var(--bb-red);
+      color:#fff;
+      transform:translateY(-4px);
+    }
+    .bb-footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:56px;
+      padding:22px 0;
+      font-size:.83rem;
+      color:#a99e90;
+    }
+    .brand-footer{
+      font-family:'Playfair Display',serif;
+      font-weight:800;
+      font-size:1.6rem;
+      color:#fff;
+    }
+    .brand-footer .brand-beth{ color:var(--bb-red); }
+    .brand-footer .brand-bites{ color:var(--bb-gold); }
+
+    /* ---------------- Floating buttons ---------------- */
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:24px;
+      width:58px; height:58px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:1.8rem;
+      z-index:1060;
+      box-shadow:0 10px 26px rgba(37,211,102,.45);
+      animation:bbPulse 2.2s infinite;
+      transition:transform .3s ease;
+    }
+    .whatsapp-float:hover{ color:#fff; transform:scale(1.08); }
+    @keyframes bbPulse{
+      0%   { box-shadow:0 0 0 0 rgba(37,211,102,.55); }
+      70%  { box-shadow:0 0 0 18px rgba(37,211,102,0); }
+      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+    }
+    .to-top{
+      position:fixed;
+      right:26px;
+      bottom:96px;
+      width:46px; height:46px;
+      border-radius:50%;
+      border:none;
+      background:var(--bb-red);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:1.1rem;
+      z-index:1059;
+      opacity:0;
+      visibility:hidden;
+      transition:all .3s ease;
+      box-shadow:0 8px 20px rgba(178,34,34,.35);
+    }
+    .to-top.show{ opacity:1; visibility:visible; }
+    .to-top:hover{ background:var(--bb-red-dark); transform:translateY(-3px); }
+
+    /* ---------------- Scroll reveal ---------------- */
+    .reveal{
+      opacity:0;
+      transform:translateY(34px);
+      transition:opacity .75s ease, transform .75s ease;
+    }
+    .reveal.active{ opacity:1; transform:translateY(0); }
+
+    /* ---------------- Responsive ---------------- */
+    @media (max-width: 991.98px){
+      section{ padding:66px 0; }
+      .bb-hero{ min-height:auto; padding:110px 0 70px; text-align:center; }
+      .bb-hero p.lead{ margin-left:auto; margin-right:auto; }
+      .hero-meta .item{ justify-content:center; }
+      .bb-navbar .nav-link{ margin:.15rem 0; }
+      .bb-navbar .navbar-collapse{
+        background:#fff;
+        border-radius:14px;
+        padding:1rem 1.2rem;
+        margin-top:.9rem;
+        box-shadow:var(--bb-shadow);
+      }
+      .ceo-badge{ position:static; margin-top:1rem; max-width:100%; }
+      .about-img-wrap{ padding:0 0 16px 16px; }
+    }
+    @media (max-width: 575.98px){
+      .bb-hero h1{ font-size:2rem; }
+      .btn{ padding:.7rem 1.4rem; font-size:.92rem; }
+      .bb-cta{ padding:2.4rem 1.4rem; }
+      .to-top{ right:24px; bottom:92px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      .reveal{ opacity:1; transform:none; transition:none; }
+      .whatsapp-float{ animation:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="bb-topbar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-4">
+        <span><i class="bi bi-telephone-fill me-1"></i>
+          <a href="tel:+2349032960035">0903 296 0035</a>
+        </span>
+        <span><i class="bi bi-envelope-fill me-1"></i>
+          <a href="mailto:bethbites@gmail.com">bethbites@gmail.com</a>
+        </span>
+        <span><i class="bi bi-clock-fill me-1"></i> Mon – Sat: 8:00am – 9:00pm</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="me-1">Follow us:</span>
+        <a href="https://www.tiktok.com/@BethBites" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com/BethBites" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.youtube.com/@Beth-Bites" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg bb-navbar sticky-top" id="bbNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-beth">BETH</span> <span class="brand-bites">BITES</span>
+        <span class="brand-sub">Since 2016</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bbNavMenu"
+              aria-controls="bbNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="bbNavMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-bb btn-sm px-3 py-2"
+               href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-1"></i> Order Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="bb-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="bb-pill mb-3 reveal">
+            <i class="bi bi-star-fill"></i> Cooking with love since 2016
+          </span>
+
+          <h1 class="reveal" style="transition-delay:.1s;">
+            Delicious <span class="hero-gold">Nigerian</span>, African &amp;
+            <span class="hero-gold">Intercontinental</span> Meals, Made Fresh Daily
+          </h1>
+
+          <p class="lead reveal" style="transition-delay:.2s;">
+            From smoky party jollof and rich egusi soup to grilled fish, pastries,
+            chilled drinks and creamy ice cream — BETH BITES brings the taste of home
+            and the flavours of the world straight to your plate. Dine in or let us
+            deliver to your doorstep.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4 reveal" style="transition-delay:.3s;">
+            <a href="services.html" class="btn btn-bb">
+              <i class="bi bi-egg-fried me-1"></i> Explore Our Menu
+            </a>
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener" class="btn btn-ghost-light">
+              <i class="bi bi-whatsapp me-1"></i> Order on WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-meta row g-3 reveal" style="transition-delay:.4s;">
+            <div class="col-md-4">
+              <div class="item"><i class="bi bi-telephone-fill"></i><span>0903 296 0035</span></div>
+            </div>
+            <div class="col-md-4">
+              <div class="item"><i class="bi bi-truck"></i><span>Fast Home Delivery</span></div>
+            </div>
+            <div class="col-md-4">
+              <div class="item"><i class="bi bi-shop"></i><span>Dine-In &amp; Takeaway</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== WHAT WE SERVE ==================== -->
+  <section id="serve">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">What We Serve</span>
+        <h2>A Taste For Every Craving</h2>
+        <div class="divider"></div>
+        <p>
+          Whether you are in the mood for a hearty Nigerian classic, a continental
+          favourite, or something sweet on the side — we have got you covered.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="bb-card p-4 text-center">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-fire"></i></div>
+            <h4 class="h5 mb-2">Nigerian Dishes</h4>
+            <p class="mb-0 small text-muted">
+              Jollof rice, egusi, efo riro, pounded yam, amala, pepper soup and more —
+              cooked the traditional way.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.1s;">
+          <div class="bb-card p-4 text-center">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-globe-africa"></i></div>
+            <h4 class="h5 mb-2">African Cuisine</h4>
+            <p class="mb-0 small text-muted">
+              Bold, rich and spicy flavours from across the continent, prepared with
+              authentic spices and fresh ingredients.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.2s;">
+          <div class="bb-card p-4 text-center">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-globe2"></i></div>
+            <h4 class="h5 mb-2">Intercontinental</h4>
+            <p class="mb-0 small text-muted">
+              Pasta, burgers, grilled chicken, seafood, salads and continental plates
+              made to satisfy every palate.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.3s;">
+          <div class="bb-card p-4 text-center">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-cup-straw"></i></div>
+            <h4 class="h5 mb-2">Pastries, Drinks &amp; Ice Cream</h4>
+            <p class="mb-0 small text-muted">
+              Meat pies, puff puff, cakes, chin chin, chilled drinks, smoothies and
+              creamy ice cream — the perfect finish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT PREVIEW ==================== -->
+  <section id="about" style="background:#fff;">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 reveal">
+          <div class="about-img-wrap">
+            <img src="static/images/about-ceo.jpg"
+                 alt="Elizabeth E., CEO and Senior Chef of BETH BITES, preparing a meal"
+                 loading="lazy" />
+            <div class="ceo-badge">
+              <strong>Elizabeth E.</strong>
+              <span>CEO &amp; Senior Chef</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal" style="transition-delay:.15s;">
+          <div class="section-title text-start mb-4">
+            <span class="eyebrow">Our Story</span>
+            <h2>Cooking Has Always Been Her Dream</h2>
+            <div class="divider"></div>
+          </div>
+
+          <p>
+            <strong>BETH BITES</strong> started in <strong>2016</strong> with one simple
+            belief — that good food should be made with love, served with warmth, and
+            shared with family. What began as a passion in the kitchen has grown into a
+            restaurant that serves hundreds of happy customers every week.
+          </p>
+
+          <p>
+            Our CEO, <strong>Elizabeth E.</strong>, is also our <strong>Senior Chef</strong>.
+            She still personally oversees the kitchen, tasting and perfecting every recipe.
+            Opening her own restaurant has always been her dream — and today she lives it,
+            one delicious plate at a time.
+          </p>
+
+          <ul class="check-list my-4">
+            <li><i class="bi bi-check-circle-fill"></i><span>Freshly prepared meals, every single day</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Nigerian, African &amp; Intercontinental menus</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Pastries, drinks &amp; ice cream made in-house</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Reliable home delivery you can count on</span></li>
+          </ul>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="about.html" class="btn btn-bb">Read More About Us</a>
+            <a href="contact.html" class="btn btn-bb-outline">Visit Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MENU HIGHLIGHTS ==================== -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">From Our Kitchen</span>
+        <h2>Signature Dishes You'll Love</h2>
+        <div class="divider"></div>
+        <p>A little taste of what we cook best. Call or message us to order any of these today.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/jollof-rice.jpg" alt="Jollof rice served with grilled chicken" loading="lazy" />
+              <span class="dish-tag">Most Popular</span>
+              <span class="dish-price">₦4,500</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Jollof Rice &amp; Grilled Chicken</h4>
+              <p class="small text-muted mb-0">
+                Smoky, well-seasoned party jollof served with juicy grilled chicken and fried plantain.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s;">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/egusi-soup.jpg" alt="Egusi soup served with pounded yam" loading="lazy" />
+              <span class="dish-price">₦5,000</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Egusi Soup &amp; Pounded Yam</h4>
+              <p class="small text-muted mb-0">
+                Rich, hearty egusi cooked with assorted meat and stockfish, served with smooth pounded yam.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.2s;">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/grilled-fish.jpg" alt="Peppered grilled tilapia fish" loading="lazy" />
+              <span class="dish-tag">Chef's Special</span>
+              <span class="dish-price">₦7,500</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Peppered Grilled Fish</h4>
+              <p class="small text-muted mb-0">
+                Fresh tilapia marinated in our secret spice blend, grilled to perfection and served with sauce.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/fried-rice.jpg" alt="Fried rice with turkey" loading="lazy" />
+              <span class="dish-price">₦5,500</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Fried Rice &amp; Turkey</h4>
+              <p class="small text-muted mb-0">
+                Colourful vegetable fried rice paired with tender, well-spiced turkey.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s;">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pastries.jpg" alt="Meat pie, puff puff and other pastries" loading="lazy" />
+              <span class="dish-tag">Freshly Baked</span>
+              <span class="dish-price">₦1,500</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Pastries &amp; Small Chops</h4>
+              <p class="small text-muted mb-0">
+                Meat pie, puff puff, chin chin, doughnuts and small chops — perfect for any occasion.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.2s;">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/icecream.jpg" alt="Ice cream and chilled drinks" loading="lazy" />
+              <span class="dish-price">₦2,500</span>
+            </div>
+            <div class="p-4">
+              <h4 class="h5 mb-2">Ice Cream &amp; Chilled Drinks</h4>
+              <p class="small text-muted mb-0">
+                Creamy ice cream, smoothies, juices and cold drinks to cool you down any day.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="services.html" class="btn btn-gold">
+          <i class="bi bi-book me-1"></i> See Full Menu &amp; Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="bb-stats">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-lg-3 reveal">
+          <i class="bi bi-award"></i>
+          <div class="num"><span id="yearsCount" data-count="0" data-suffix="+">0</span></div>
+          <div class="label">Years of Service</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.1s;">
+          <i class="bi bi-egg-fried"></i>
+          <div class="num"><span data-count="50" data-suffix="+">0</span></div>
+          <div class="label">Dishes on Our Menu</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.2s;">
+          <i class="bi bi-emoji-smile"></i>
+          <div class="num"><span data-count="5000" data-suffix="+">0</span></div>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.3s;">
+          <i class="bi bi-basket"></i>
+          <div class="num"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="label">Fresh Ingredients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES PREVIEW ==================== -->
+  <section id="services" style="background:#fff;">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">How We Serve You</span>
+        <h2>More Than Just a Restaurant</h2>
+        <div class="divider"></div>
+        <p>From a quiet dinner to feeding a whole crowd — BETH BITES is ready to serve you.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="bb-card p-4 text-center h-100">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-shop-window"></i></div>
+            <h4 class="h5 mb-2">Dine-In &amp; Takeaway</h4>
+            <p class="small text-muted mb-0">
+              Enjoy a warm, welcoming space or grab your food to go — whichever suits your day.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.1s;">
+          <div class="bb-card p-4 text-center h-100">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-truck"></i></div>
+            <h4 class="h5 mb-2">Home Delivery</h4>
+            <p class="small text-muted mb-0">
+              Fast, careful delivery straight to your doorstep. Just call or message us on WhatsApp.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.2s;">
+          <div class="bb-card p-4 text-center h-100">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-people-fill"></i></div>
+            <h4 class="h5 mb-2">Events &amp; Catering</h4>
+            <p class="small text-muted mb-0">
+              Birthdays, weddings, office parties and get-togethers — we cater for every occasion.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.3s;">
+          <div class="bb-card p-4 text-center h-100">
+            <div class="icon-circle mx-auto mb-3"><i class="bi bi-cake2"></i></div>
+            <h4 class="h5 mb-2">Pastries &amp; Ice Cream</h4>
+            <p class="small text-muted mb-0">
+              Freshly baked pastries, cakes, creamy ice cream and chilled drinks available daily.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What Our Customers Say</h2>
+        <div class="divider"></div>
+        <p>We are proud of every plate we serve — and our customers keep coming back for more.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 reveal">
+          <div class="quote-card">
+            <i class="bi bi-quote"></i>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "Their jollof rice is the best I have tasted in a long time. The delivery was
+              fast and the food arrived hot. BETH BITES never disappoints!"
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">A</div>
+              <div>
+                <strong class="d-block" style="font-size:.95rem;">Adaeze N.</strong>
+                <span class="text-muted" style="font-size:.8rem;">Loyal Customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal" style="transition-delay:.1s;">
+          <div class="quote-card">
+            <i class="bi bi-quote"></i>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "We ordered small chops and pastries for our office party and everyone kept
+              asking who made them. Excellent taste and very neat packaging."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">T</div>
+              <div>
+                <strong class="d-block" style="font-size:.95rem;">Tunde A.</strong>
+                <span class="text-muted" style="font-size:.8rem;">Corporate Client</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal" style="transition-delay:.2s;">
+          <div class="quote-card">
+            <i class="bi bi-quote"></i>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <p>
+              "Chef Elizabeth's egusi soup tastes like home. You can tell the food is made
+              with real love. My family orders from them every weekend."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">C</div>
+              <div>
+                <strong class="d-block" style="font-size:.95rem;">Chidinma O.</strong>
+                <span class="text-muted" style="font-size:.8rem;">Regular Customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BAND ==================== -->
+  <section class="pt-0">
+    <div class="container">
+      <div class="bb-cta reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2 class="mb-2">Craving Something Delicious Right Now?</h2>
+            <p class="mb-0">
+              Call or send us a WhatsApp message and we will get your order started.
+              Home delivery is available — hot, fresh and right on time.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener" class="btn btn-gold w-100 w-lg-auto mb-2 mb-lg-0">
+              <i class="bi bi-whatsapp me-1"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+2349032960035" class="btn btn-ghost-light w-100 w-lg-auto">
+              <i class="bi bi-telephone-fill me-1"></i> 0903 296 0035
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bb-footer">
+    <div class="container">
+      <div class="row g-5">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="brand-footer mb-3">
+            <span class="brand-beth">BETH</span> <span class="brand-bites">BITES</span>
+          </div>
+          <p class="mb-3">
+            Serving delicious Nigerian, African and Intercontinental dishes, pastries,
+            drinks and ice cream since 2016. Made with love, served with pride.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="https://www.tiktok.com/@BethBites" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.facebook.com/BethBites" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@Beth-Bites" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/2349032960035" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links mb-0">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="about.html">About Us</a></li>
+            <li class="mb-2"><a href="services.html">Services</a></li>
+            <li class="mb-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Get In Touch</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3 d-flex gap-2">
+              <i class="bi bi-telephone-fill"></i>
+              <span><a href="tel:+2349032960035">0903 296 0035</a><br />
+              <small class="text-muted">Calls &amp; WhatsApp</small></span>
+            </li>
+            <li class="mb-3 d-flex gap-2">
+              <i class="bi bi-envelope-fill"></i>
+              <span><a href="mailto:bethbites@gmail.com">bethbites@gmail.com</a></span>
+            </li>
+            <li class="d-flex gap-2">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>BETH BITES Restaurant<br /><small class="text-muted">Home delivery available</small></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Opening Hours</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex justify-content-between mb-2">
+              <span>Monday – Friday</span><span class="text-white">8am – 9pm</span>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span>Saturday</span><span class="text-white">9am – 9pm</span>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span>Sunday</span><span class="text-white">12pm – 8pm</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+             target="_blank" rel="noopener" class="btn btn-bb btn-sm mt-3">
+            <i class="bi bi-bag-check me-1"></i> Place an Order
+          </a>
+        </div>
+
+      </div>
+
+      <div class="bb-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; <span id="bbYear">2026</span> BETH BITES. All rights reserved.</span>
+        <span>Owned &amp; led by <strong class="text-white">Elizabeth E.</strong> — CEO &amp; Senior Chef</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING BUTTONS ==================== -->
+  <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with BETH BITES on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================== INTERNAL JAVASCRIPT ===================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- 1. Dynamic footer year ---------- */
+      var yearEl = document.getElementById('bbYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      /* ---------- 2. Years of service (since 2016) ---------- */
+      var yearsEl = document.getElementById('yearsCount');
+      if (yearsEl) {
+        var years = new Date().getFullYear() - 2016;
+        yearsEl.dataset.count = years > 0 ? years : 1;
+      }
+
+      /* ---------- 3. Navbar shrink on scroll ---------- */
+      var nav = document.getElementById('bbNav');
+      var toTop = document.getElementById('toTop');
+
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 40);
+        if (toTop) toTop.classList.toggle('show', y > 400);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- 4. Back to top ---------- */
+      if (toTop) {
+        toTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ---------- 5. Close mobile menu after clicking a link ---------- */
+      var navCollapse = document.getElementById('bbNavMenu');
+      if (navCollapse) {
+        navCollapse.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (navCollapse.classList.contains('show')) {
+              var instance = bootstrap.Collapse.getInstance(navCollapse);
+              if (instance) instance.hide();
+            }
+          });
+        });
+      }
+
+      /* ---------- 6. Scroll reveal animation ---------- */
+      var revealItems = document.querySelectorAll('.reveal');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(function (el) { el.classList.add('active'); });
+      } else {
+        var revealObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        revealItems.forEach(function (el) { revealObserver.observe(el); });
+      }
+
+      /* ---------- 7. Animated number counters ---------- */
+      function animateCounter(el) {
+        var target = parseFloat(el.dataset.count) || 0;
+        var suffix = el.dataset.suffix || '';
+        var duration = 1600;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (startTime === null) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+          el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target.toLocaleString() + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      var counters = document.querySelectorAll('[data-count]');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        counters.forEach(function (el) {
+          el.textContent = (parseFloat(el.dataset.count) || 0).toLocaleString() + (el.dataset.suffix || '');
+        });
+      } else {
+        var counterObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        counters.forEach(function (el) { counterObserver.observe(el); });
+      }
+
+    })();
+  </script>
+</body>
+</html>
