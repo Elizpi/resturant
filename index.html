@@ -135,13 +135,16 @@
       padding:.45rem 0;
       box-shadow:0 6px 24px rgba(51,51,51,.10);
     }
-    .navbar-brand{
-      font-family:'Playfair Display', serif;
-      font-weight:800;
-      font-size:1.55rem;
-      letter-spacing:.5px;
-      color:var(--bb-text);
-      line-height:1;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+      display: block;
     }
     .navbar-brand:hover{ color:var(--bb-text); }
     .brand-beth{ color:var(--bb-red); }
@@ -600,9 +603,8 @@
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg bb-navbar sticky-top" id="bbNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <span class="brand-beth">BETH</span> <span class="brand-bites">BITES</span>
-        <span class="brand-sub">Since 2016</span>
+      <a href="index.html" class="logo">
+       <img src="static/images/food-logo.png" alt="Beth Bites Logo">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bbNavMenu"
