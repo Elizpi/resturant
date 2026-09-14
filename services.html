@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BETH BITES services — Nigerian, African & Intercontinental dishes, pastries, drinks, ice cream, dine-in, takeaway, event catering and home delivery in Wuse II, Abuja, FCT, Nigeria." />
+  <meta name="theme-color" content="#B22222" />
+  <title>Our Services &amp; Menu | BETH BITES — Wuse II, Abuja</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===================== INTERNAL CSS ===================== -->
+  <style>
+    :root{
+      --bb-red:        #B22222;
+      --bb-red-dark:   #8E1A1A;
+      --bb-cream:      #FFF8E7;
+      --bb-gold:       #F4B400;
+      --bb-text:       #333333;
+      --bb-muted:      #6d6d6d;
+      --bb-dark:       #241111;
+      --bb-radius:     18px;
+      --bb-shadow:     0 12px 34px rgba(51,51,51,.08);
+      --bb-shadow-lg:  0 22px 55px rgba(51,51,51,.16);
+    }
+
+    *{ box-sizing:border-box; }
+
+    html{ scroll-behavior:smooth; }
+
+    body{
+      background-color:var(--bb-cream);
+      color:var(--bb-text);
+      font-family:'Poppins', system-ui, -apple-system, sans-serif;
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3,h4,h5,.font-display{
+      font-family:'Playfair Display', Georgia, serif;
+      font-weight:700;
+      color:var(--bb-text);
+    }
+
+    a{ text-decoration:none; }
+    img{ max-width:100%; }
+
+    section{ padding:88px 0; }
+
+    /* ---------------- Buttons ---------------- */
+    .btn{
+      border-radius:50px;
+      font-weight:600;
+      padding:.75rem 1.7rem;
+      letter-spacing:.3px;
+      transition:all .3s ease;
+    }
+    .btn-bb{
+      background:var(--bb-red);
+      border:2px solid var(--bb-red);
+      color:#fff;
+    }
+    .btn-bb:hover,
+    .btn-bb:focus{
+      background:var(--bb-red-dark);
+      border-color:var(--bb-red-dark);
+      color:#fff;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(178,34,34,.32);
+    }
+    .btn-bb-outline{
+      background:transparent;
+      border:2px solid var(--bb-red);
+      color:var(--bb-red);
+    }
+    .btn-bb-outline:hover,
+    .btn-bb-outline:focus{
+      background:var(--bb-red);
+      color:#fff;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(178,34,34,.28);
+    }
+    .btn-gold{
+      background:var(--bb-gold);
+      border:2px solid var(--bb-gold);
+      color:#3a2a00;
+    }
+    .btn-gold:hover,
+    .btn-gold:focus{
+      background:#d99f00;
+      border-color:#d99f00;
+      color:#3a2a00;
+      transform:translateY(-3px);
+      box-shadow:0 12px 26px rgba(244,180,0,.38);
+    }
+    .btn-ghost-light{
+      background:transparent;
+      border:2px solid rgba(255,255,255,.8);
+      color:#fff;
+    }
+    .btn-ghost-light:hover,
+    .btn-ghost-light:focus{
+      background:#fff;
+      border-color:#fff;
+      color:var(--bb-red);
+      transform:translateY(-3px);
+    }
+
+    /* ---------------- Top bar ---------------- */
+    .bb-topbar{
+      background:var(--bb-dark);
+      color:#f3e7d2;
+      font-size:.84rem;
+      padding:.55rem 0;
+    }
+    .bb-topbar a{ color:#f3e7d2; transition:color .25s ease; }
+    .bb-topbar a:hover{ color:var(--bb-gold); }
+    .bb-topbar i{ color:var(--bb-gold); }
+
+    /* ---------------- Navbar ---------------- */
+    .bb-navbar{
+      background:rgba(255,248,231,.96);
+      backdrop-filter:blur(10px);
+      padding:.85rem 0;
+      transition:padding .3s ease, box-shadow .3s ease;
+    }
+    .bb-navbar.scrolled{
+      padding:.45rem 0;
+      box-shadow:0 6px 24px rgba(51,51,51,.10);
+    }
+     .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+      display: block;
+    }
+    .navbar-brand:hover{ color:var(--bb-text); }
+    .brand-beth{ color:var(--bb-red); }
+    .brand-bites{ color:var(--bb-gold); }
+    .brand-sub{
+      display:block;
+      font-family:'Poppins',sans-serif;
+      font-size:.58rem;
+      letter-spacing:3.5px;
+      text-transform:uppercase;
+      color:var(--bb-muted);
+      font-weight:500;
+      margin-top:3px;
+    }
+    .bb-navbar .nav-link{
+      color:var(--bb-text);
+      font-weight:500;
+      font-size:.96rem;
+      margin:0 .3rem;
+      padding:.5rem .35rem;
+      position:relative;
+    }
+    .bb-navbar .nav-link::after{
+      content:'';
+      position:absolute;
+      left:.35rem;
+      bottom:.28rem;
+      width:0;
+      height:2px;
+      background:var(--bb-gold);
+      border-radius:2px;
+      transition:width .3s ease;
+    }
+    .bb-navbar .nav-link:hover::after,
+    .bb-navbar .nav-link.active::after{ width:calc(100% - .7rem); }
+    .bb-navbar .nav-link.active{ color:var(--bb-red); font-weight:600; }
+    .navbar-toggler{ border:none; padding:.35rem .5rem; }
+    .navbar-toggler:focus{ box-shadow:none; }
+    .navbar-toggler i{ font-size:1.7rem; color:var(--bb-red); }
+
+    /* ---------------- Inner page hero ---------------- */
+    .bb-page-hero{
+      position:relative;
+      padding:110px 0 78px;
+      color:#fff;
+      text-align:center;
+      background-color:var(--bb-dark);
+      background-image:
+        linear-gradient(rgba(24,10,6,.78), rgba(24,10,6,.68)),
+        url('static/images/services-banner.jpg');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .bb-page-hero h1{
+      color:#fff;
+      font-size:clamp(2rem, 4.6vw, 3.2rem);
+      margin-bottom:.7rem;
+    }
+    .bb-page-hero p{
+      color:#f0e5d3;
+      max-width:680px;
+      margin:0 auto;
+      font-weight:300;
+    }
+    .bb-breadcrumb{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(244,180,0,.4);
+      border-radius:50px;
+      padding:.4rem 1.2rem;
+      font-size:.8rem;
+      letter-spacing:1px;
+      margin-bottom:1.4rem;
+      text-transform:uppercase;
+    }
+    .bb-breadcrumb a{ color:var(--bb-gold); }
+    .bb-breadcrumb a:hover{ color:#fff; }
+    .bb-breadcrumb span{ color:#e8dcc8; }
+
+    /* ---------------- Section titles ---------------- */
+    .section-title{ margin-bottom:3rem; }
+    .section-title .eyebrow{
+      display:inline-block;
+      color:var(--bb-red);
+      font-weight:600;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      font-size:.76rem;
+      margin-bottom:.6rem;
+    }
+    .section-title h2{
+      font-size:clamp(1.75rem, 3.6vw, 2.65rem);
+      margin-bottom:.6rem;
+    }
+    .section-title .divider{
+      width:72px;
+      height:4px;
+      background:var(--bb-gold);
+      border-radius:4px;
+      margin:.8rem auto 1.1rem;
+    }
+    .section-title.text-start .divider{ margin-left:0; }
+    .section-title p{
+      color:var(--bb-muted);
+      max-width:680px;
+      margin:0 auto;
+    }
+    .section-title.text-start p{ margin-left:0; }
+
+    /* ---------------- Cards ---------------- */
+    .bb-card{
+      background:#fff;
+      border:1px solid rgba(51,51,51,.07);
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      height:100%;
+      overflow:hidden;
+    }
+    .bb-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--bb-shadow-lg);
+      border-color:rgba(244,180,0,.55);
+    }
+    .icon-circle{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--bb-red), var(--bb-red-dark));
+      color:var(--bb-gold);
+      font-size:1.7rem;
+      flex:0 0 auto;
+    }
+    .icon-circle.gold{
+      background:linear-gradient(135deg, var(--bb-gold), #d99f00);
+      color:#3a2a00;
+    }
+    .icon-circle.sm{ width:48px; height:48px; font-size:1.25rem; }
+
+    /* ---------------- Service cards ---------------- */
+    .service-card{
+      background:#fff;
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      border:1px solid rgba(51,51,51,.07);
+      padding:2.1rem 1.8rem;
+      height:100%;
+      position:relative;
+      overflow:hidden;
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .service-card::before{
+      content:'';
+      position:absolute;
+      left:0; top:0;
+      width:100%;
+      height:5px;
+      background:linear-gradient(90deg, var(--bb-red), var(--bb-gold));
+    }
+    .service-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--bb-shadow-lg);
+      border-color:rgba(244,180,0,.55);
+    }
+    .service-card h4{
+      font-size:1.18rem;
+      margin:1.1rem 0 .6rem;
+    }
+    .service-card p{
+      font-size:.93rem;
+      color:var(--bb-muted);
+      margin-bottom:1.1rem;
+    }
+    .service-num{
+      position:absolute;
+      right:18px;
+      top:10px;
+      font-family:'Playfair Display',serif;
+      font-size:3.2rem;
+      font-weight:800;
+      color:rgba(244,180,0,.18);
+      line-height:1;
+    }
+
+    /* ---------------- Menu tabs ---------------- */
+    .menu-filter{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:.6rem;
+      margin-bottom:3rem;
+    }
+    .menu-filter .filter-btn{
+      background:#fff;
+      border:2px solid rgba(51,51,51,.12);
+      color:var(--bb-text);
+      border-radius:50px;
+      padding:.55rem 1.35rem;
+      font-size:.88rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:all .3s ease;
+      font-family:'Poppins',sans-serif;
+    }
+    .menu-filter .filter-btn i{ color:var(--bb-gold); margin-right:.35rem; }
+    .menu-filter .filter-btn:hover{
+      border-color:var(--bb-red);
+      color:var(--bb-red);
+      transform:translateY(-2px);
+    }
+    .menu-filter .filter-btn.active{
+      background:var(--bb-red);
+      border-color:var(--bb-red);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(178,34,34,.28);
+    }
+    .menu-filter .filter-btn.active i{ color:var(--bb-gold); }
+
+    /* ---------------- Dish cards ---------------- */
+    .dish-col{ transition:opacity .35s ease, transform .35s ease; }
+    .dish-col.hide{
+      display:none;
+    }
+    .dish-img{
+      position:relative;
+      overflow:hidden;
+      aspect-ratio:4 / 3;
+      background:#efe4cf;
+    }
+    .dish-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .65s ease;
+    }
+    .bb-card:hover .dish-img img{ transform:scale(1.08); }
+    .dish-price{
+      position:absolute;
+      right:12px;
+      bottom:12px;
+      background:var(--bb-red);
+      color:#fff;
+      font-weight:600;
+      font-size:.84rem;
+      padding:.3rem .85rem;
+      border-radius:50px;
+      box-shadow:0 6px 16px rgba(0,0,0,.25);
+    }
+    .dish-tag{
+      position:absolute;
+      left:12px;
+      top:12px;
+      background:var(--bb-gold);
+      color:#3a2a00;
+      font-weight:600;
+      font-size:.72rem;
+      letter-spacing:.4px;
+      padding:.25rem .75rem;
+      border-radius:50px;
+    }
+    .dish-tag.spicy{
+      background:var(--bb-red);
+      color:#fff;
+    }
+    .dish-body{ padding:1.4rem 1.5rem 1.6rem; }
+    .dish-body h4{
+      font-size:1.08rem;
+      margin-bottom:.45rem;
+    }
+    .dish-body p{
+      font-size:.88rem;
+      color:var(--bb-muted);
+      margin-bottom:.9rem;
+      min-height:2.7rem;
+    }
+    .dish-meta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.6rem;
+      border-top:1px dashed rgba(51,51,51,.12);
+      padding-top:.85rem;
+    }
+    .dish-meta .cat{
+      font-size:.74rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:var(--bb-red);
+      font-weight:600;
+    }
+    .dish-order{
+      font-size:.82rem;
+      font-weight:600;
+      color:var(--bb-red);
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+      transition:gap .25s ease, color .25s ease;
+    }
+    .dish-order:hover{ gap:.6rem; color:var(--bb-red-dark); }
+
+    .menu-empty{
+      text-align:center;
+      padding:3rem 1rem;
+      color:var(--bb-muted);
+      display:none;
+    }
+    .menu-empty.show{ display:block; }
+    .menu-empty i{ font-size:2.6rem; color:var(--bb-gold); display:block; margin-bottom:.8rem; }
+
+    /* ---------------- Steps (delivery) ---------------- */
+    .step-card{
+      background:#fff;
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      border:1px solid rgba(51,51,51,.07);
+      padding:2rem 1.5rem 1.7rem;
+      height:100%;
+      text-align:center;
+      position:relative;
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    .step-card:hover{ transform:translateY(-8px); box-shadow:var(--bb-shadow-lg); }
+    .step-num{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      margin:0 auto 1.1rem;
+      background:var(--bb-red);
+      color:#fff;
+      font-family:'Playfair Display',serif;
+      font-size:1.5rem;
+      font-weight:800;
+      box-shadow:0 0 0 8px rgba(244,180,0,.2);
+    }
+    .step-card h4{ font-size:1.05rem; margin-bottom:.5rem; }
+    .step-card p{ font-size:.9rem; color:var(--bb-muted); margin:0; }
+
+    /* ---------------- Delivery banner ---------------- */
+    .delivery-banner{
+      background:linear-gradient(135deg, rgba(36,17,17,.94), rgba(36,17,17,.86)),
+                 url('static/images/delivery.jpg') center/cover no-repeat;
+      background-color:var(--bb-dark);
+      color:#fff;
+      border-radius:var(--bb-radius);
+      padding:3rem 2.4rem;
+      box-shadow:var(--bb-shadow-lg);
+    }
+    .delivery-banner h3{ color:#fff; font-size:clamp(1.4rem,3vw,2rem); }
+    .delivery-banner p{ color:#f0e5d3; }
+    .delivery-banner .badge-item{
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+      color:#f7ecdb;
+      font-size:.92rem;
+      margin-bottom:.6rem;
+    }
+    .delivery-banner .badge-item i{ color:var(--bb-gold); font-size:1.2rem; }
+
+    /* ---------------- Catering packages ---------------- */
+    .package-card{
+      background:#fff;
+      border-radius:var(--bb-radius);
+      box-shadow:var(--bb-shadow);
+      border:1px solid rgba(51,51,51,.07);
+      padding:2.2rem 1.9rem;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .package-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--bb-shadow-lg);
+      border-color:rgba(244,180,0,.6);
+    }
+    .package-card.featured{
+      border:2px solid var(--bb-gold);
+      position:relative;
+    }
+    .package-card.featured::after{
+      content:'Most Popular';
+      position:absolute;
+      top:-14px;
+      left:50%;
+      transform:translateX(-50%);
+      background:var(--bb-gold);
+      color:#3a2a00;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.8px;
+      padding:.28rem 1rem;
+      border-radius:50px;
+      white-space:nowrap;
+    }
+    .package-card h4{ font-size:1.2rem; margin-bottom:.35rem; }
+    .package-card .pkg-sub{ font-size:.85rem; color:var(--bb-muted); margin-bottom:1.2rem; }
+    .package-price{
+      font-family:'Playfair Display',serif;
+      font-size:1.9rem;
+      font-weight:800;
+      color:var(--bb-red);
+      line-height:1;
+      margin-bottom:1.4rem;
+    }
+    .package-price small{
+      font-family:'Poppins',sans-serif;
+      font-size:.8rem;
+      font-weight:500;
+      color:var(--bb-muted);
+      display:block;
+      margin-top:.35rem;
+    }
+    .pkg-list{
+      list-style:none;
+      padding:0;
+      margin:0 0 1.6rem;
+      flex-grow:1;
+    }
+    .pkg-list li{
+      display:flex;
+      gap:.6rem;
+      align-items:flex-start;
+      font-size:.9rem;
+      margin-bottom:.6rem;
+      color:var(--bb-text);
+    }
+    .pkg-list i{ color:var(--bb-gold); margin-top:.2rem; }
+    .pkg-list li.muted{ color:var(--bb-muted); }
+    .pkg-list li.muted i{ color:rgba(51,51,51,.25); }
+
+    /* ---------------- FAQ ---------------- */
+    .accordion-item{
+      border:1px solid rgba(51,51,51,.1);
+      border-radius:14px !important;
+      margin-bottom:.9rem;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 6px 18px rgba(51,51,51,.05);
+    }
+    .accordion-button{
+      font-family:'Playfair Display', serif;
+      font-weight:700;
+      font-size:1.02rem;
+      color:var(--bb-text);
+      background:#fff;
+      padding:1.15rem 1.4rem;
+    }
+    .accordion-button:not(.collapsed){
+      background:rgba(244,180,0,.12);
+      color:var(--bb-red);
+      box-shadow:none;
+    }
+    .accordion-button:focus{
+      box-shadow:none;
+      border-color:rgba(244,180,0,.6);
+    }
+    .accordion-button::after{
+      background-image:none;
+      content:'\F282';
+      font-family:'bootstrap-icons';
+      font-size:1.1rem;
+      color:var(--bb-red);
+      transition:transform .3s ease;
+      width:auto;
+      height:auto;
+    }
+    .accordion-button:not(.collapsed)::after{
+      content:'\F286';
+      transform:none;
+    }
+    .accordion-body{
+      font-size:.93rem;
+      color:var(--bb-muted);
+      padding:0 1.4rem 1.3rem;
+    }
+
+    /* ---------------- Stats ---------------- */
+    .bb-stats{
+      background:linear-gradient(135deg, var(--bb-red) 0%, var(--bb-red-dark) 100%);
+      color:#fff;
+      padding:70px 0;
+    }
+    .bb-stats i{ color:var(--bb-gold); font-size:2rem; }
+    .bb-stats .num{
+      font-family:'Playfair Display', serif;
+      font-size:clamp(2rem, 4vw, 2.8rem);
+      font-weight:800;
+      color:#fff;
+      line-height:1;
+      margin:.6rem 0 .35rem;
+    }
+    .bb-stats .label{
+      color:#ffe9c9;
+      font-size:.9rem;
+      letter-spacing:.5px;
+    }
+
+    /* ---------------- CTA band ---------------- */
+    .bb-cta{
+      background:linear-gradient(135deg, rgba(178,34,34,.96), rgba(142,26,26,.96)),
+                 url('static/images/cta-bg.jpg') center/cover no-repeat;
+      background-color:var(--bb-red);
+      color:#fff;
+      border-radius:var(--bb-radius);
+      padding:3.2rem 2.2rem;
+      box-shadow:var(--bb-shadow-lg);
+    }
+    .bb-cta h2{ color:#fff; font-size:clamp(1.6rem,3.4vw,2.3rem); }
+    .bb-cta p{ color:#ffe6cd; }
+
+    /* ---------------- Footer ---------------- */
+    .bb-footer{
+      background:var(--bb-dark);
+      color:#cfc3b3;
+      padding:72px 0 0;
+      font-size:.93rem;
+    }
+    .bb-footer h5{
+      color:#fff;
+      font-size:1.05rem;
+      margin-bottom:1.2rem;
+      letter-spacing:.4px;
+    }
+    .bb-footer a{ color:#cfc3b3; transition:color .25s ease, padding-left .25s ease; }
+    .bb-footer a:hover{ color:var(--bb-gold); }
+    .bb-footer .footer-links a:hover{ padding-left:6px; }
+    .bb-footer .bi{ color:var(--bb-gold); }
+    .footer-social a{
+      width:42px; height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.08);
+      color:var(--bb-gold);
+      font-size:1.05rem;
+      transition:all .3s ease;
+    }
+    .footer-social a:hover{
+      background:var(--bb-red);
+      color:#fff;
+      transform:translateY(-4px);
+    }
+    .bb-footer-bottom{
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:56px;
+      padding:22px 0;
+      font-size:.83rem;
+      color:#a99e90;
+    }
+    .brand-footer{
+      font-family:'Playfair Display',serif;
+      font-weight:800;
+      font-size:1.6rem;
+      color:#fff;
+    }
+    .brand-footer .brand-beth{ color:var(--bb-red); }
+    .brand-footer .brand-bites{ color:var(--bb-gold); }
+
+    /* ---------------- Floating buttons ---------------- */
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:24px;
+      width:58px; height:58px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:1.8rem;
+      z-index:1060;
+      box-shadow:0 10px 26px rgba(37,211,102,.45);
+      animation:bbPulse 2.2s infinite;
+      transition:transform .3s ease;
+    }
+    .whatsapp-float:hover{ color:#fff; transform:scale(1.08); }
+    @keyframes bbPulse{
+      0%   { box-shadow:0 0 0 0 rgba(37,211,102,.55); }
+      70%  { box-shadow:0 0 0 18px rgba(37,211,102,0); }
+      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+    }
+    .to-top{
+      position:fixed;
+      right:26px;
+      bottom:96px;
+      width:46px; height:46px;
+      border-radius:50%;
+      border:none;
+      background:var(--bb-red);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:1.1rem;
+      z-index:1059;
+      opacity:0;
+      visibility:hidden;
+      transition:all .3s ease;
+      box-shadow:0 8px 20px rgba(178,34,34,.35);
+    }
+    .to-top.show{ opacity:1; visibility:visible; }
+    .to-top:hover{ background:var(--bb-red-dark); transform:translateY(-3px); }
+
+    /* ---------------- Scroll reveal ---------------- */
+    .reveal{
+      opacity:0;
+      transform:translateY(34px);
+      transition:opacity .75s ease, transform .75s ease;
+    }
+    .reveal.active{ opacity:1; transform:translateY(0); }
+
+    /* ---------------- Responsive ---------------- */
+    @media (max-width: 991.98px){
+      section{ padding:66px 0; }
+      .bb-page-hero{ padding:96px 0 62px; }
+      .bb-navbar .nav-link{ margin:.15rem 0; }
+      .bb-navbar .navbar-collapse{
+        background:#fff;
+        border-radius:14px;
+        padding:1rem 1.2rem;
+        margin-top:.9rem;
+        box-shadow:var(--bb-shadow);
+      }
+      .dish-body p{ min-height:auto; }
+    }
+    @media (max-width: 575.98px){
+      .btn{ padding:.7rem 1.4rem; font-size:.92rem; }
+      .bb-cta{ padding:2.4rem 1.4rem; }
+      .to-top{ right:24px; bottom:92px; }
+      .menu-filter .filter-btn{ padding:.5rem 1.05rem; font-size:.82rem; }
+      .delivery-banner{ padding:2.2rem 1.4rem; }
+      .service-card{ padding:1.7rem 1.4rem; }
+      .package-card{ padding:1.8rem 1.4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      .reveal{ opacity:1; transform:none; transition:none; }
+      .whatsapp-float{ animation:none; }
+      .dish-col{ transition:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="bb-topbar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-4">
+        <span><i class="bi bi-telephone-fill me-1"></i>
+          <a href="tel:+2349032960035">0903 296 0035</a>
+        </span>
+        <span><i class="bi bi-envelope-fill me-1"></i>
+          <a href="mailto:bethbites@gmail.com">bethbites@gmail.com</a>
+        </span>
+        <span><i class="bi bi-geo-alt-fill me-1"></i> Wuse II, Abuja, FCT, Nigeria</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="me-1">Follow us:</span>
+        <a href="https://www.tiktok.com/@BethBites" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com/BethBites" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.youtube.com/@Beth-Bites" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg bb-navbar sticky-top" id="bbNav">
+    <div class="container">
+      <a href="index.html" class="logo">
+       <img src="static/images/food-logo.png" alt="Beth Bites Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bbNavMenu"
+              aria-controls="bbNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="bbNavMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-bb btn-sm px-3 py-2"
+               href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-1"></i> Order Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <header class="bb-page-hero">
+    <div class="container">
+      <div class="bb-breadcrumb reveal">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right" style="font-size:.6rem;"></i>
+        <span>Services &amp; Menu</span>
+      </div>
+
+      <h1 class="reveal" style="transition-delay:.1s;">Our Services &amp; Menu</h1>
+
+      <p class="reveal" style="transition-delay:.2s;">
+        Nigerian, African and Intercontinental dishes, freshly baked pastries, chilled
+        drinks and creamy ice cream — dine in with us in Wuse II, Abuja, or have it
+        delivered hot to your door.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 reveal" style="transition-delay:.3s;">
+        <a href="#menu" class="btn btn-bb">
+          <i class="bi bi-book me-1"></i> Browse the Menu
+        </a>
+        <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+           target="_blank" rel="noopener" class="btn btn-ghost-light">
+          <i class="bi bi-whatsapp me-1"></i> Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SERVICES OVERVIEW ==================== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Six Ways We Can Serve You</h2>
+        <div class="divider"></div>
+        <p>
+          Whether it is a quick lunch, a family dinner, a birthday party or a full
+          office event — there is a BETH BITES service built for it.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <span class="service-num">01</span>
+            <div class="icon-circle"><i class="bi bi-shop-window"></i></div>
+            <h4>Dine-In</h4>
+            <p>
+              Enjoy your meal fresh from the kitchen in our warm, clean and welcoming
+              space in Wuse II, Abuja. Perfect for lunch breaks and family outings.
+            </p>
+            <a href="contact.html" class="dish-order">Find Us <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.08s;">
+          <div class="service-card">
+            <span class="service-num">02</span>
+            <div class="icon-circle gold"><i class="bi bi-bag-check"></i></div>
+            <h4>Takeaway</h4>
+            <p>
+              In a hurry? Call ahead and we will have your order neatly packed and
+              waiting for you the moment you arrive. No long waits.
+            </p>
+            <a href="tel:+2349032960035" class="dish-order">Call Ahead <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.16s;">
+          <div class="service-card">
+            <span class="service-num">03</span>
+            <div class="icon-circle"><i class="bi bi-truck"></i></div>
+            <h4>Home Delivery</h4>
+            <p>
+              We bring BETH BITES to you anywhere within our Abuja delivery area.
+              Hot, well sealed and right on time — every single time.
+            </p>
+            <a href="#delivery" class="dish-order">How It Works <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.24s;">
+          <div class="service-card">
+            <span class="service-num">04</span>
+            <div class="icon-circle gold"><i class="bi bi-people-fill"></i></div>
+            <h4>Events &amp; Catering</h4>
+            <p>
+              Weddings, birthdays, naming ceremonies, office parties and get-togethers.
+              We cook in bulk without losing that home-cooked taste.
+            </p>
+            <a href="#catering" class="dish-order">See Packages <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.32s;">
+          <div class="service-card">
+            <span class="service-num">05</span>
+            <div class="icon-circle"><i class="bi bi-cake2"></i></div>
+            <h4>Pastries &amp; Small Chops</h4>
+            <p>
+              Meat pie, puff puff, chin chin, doughnuts, cakes and small chops trays —
+              freshly baked and perfect for any occasion.
+            </p>
+            <a href="#menu" class="dish-order">View Menu <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.4s;">
+          <div class="service-card">
+            <span class="service-num">06</span>
+            <div class="icon-circle gold"><i class="bi bi-cup-straw"></i></div>
+            <h4>Drinks &amp; Ice Cream</h4>
+            <p>
+              Chilled drinks, fresh juices, smoothies and creamy ice cream — the
+              perfect way to cool down after a spicy Nigerian meal.
+            </p>
+            <a href="#menu" class="dish-order">View Menu <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FULL MENU ==================== -->
+  <section id="menu" style="background:#fff;">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">Our Menu</span>
+        <h2>Explore What We Cook</h2>
+        <div class="divider"></div>
+        <p>
+          Tap a category to filter the menu. Prices are a guide — call or message us
+          on WhatsApp for today's full list and current pricing.
+        </p>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="menu-filter reveal" id="menuFilter" role="tablist" aria-label="Menu categories">
+        <button class="filter-btn active" data-filter="all" type="button">
+          <i class="bi bi-grid-fill"></i> All
+        </button>
+        <button class="filter-btn" data-filter="nigerian" type="button">
+          <i class="bi bi-fire"></i> Nigerian
+        </button>
+        <button class="filter-btn" data-filter="african" type="button">
+          <i class="bi bi-globe-africa"></i> African
+        </button>
+        <button class="filter-btn" data-filter="intercontinental" type="button">
+          <i class="bi bi-globe2"></i> Intercontinental
+        </button>
+        <button class="filter-btn" data-filter="pastries" type="button">
+          <i class="bi bi-cake2"></i> Pastries
+        </button>
+        <button class="filter-btn" data-filter="drinks" type="button">
+          <i class="bi bi-cup-straw"></i> Drinks
+        </button>
+        <button class="filter-btn" data-filter="icecream" type="button">
+          <i class="bi bi-snow"></i> Ice Cream
+        </button>
+      </div>
+
+      <div class="row g-4" id="menuGrid">
+
+        <!-- ===== Nigerian ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/jollof-rice.jpg" alt="Jollof rice served with grilled chicken and plantain" loading="lazy" />
+              <span class="dish-tag">Most Popular</span>
+              <span class="dish-price">₦4,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Jollof Rice &amp; Grilled Chicken</h4>
+              <p>Smoky party jollof served with juicy grilled chicken and fried plantain.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Jollof%20Rice%20and%20Grilled%20Chicken."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/egusi-soup.jpg" alt="Egusi soup served with pounded yam" loading="lazy" />
+              <span class="dish-price">₦5,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Egusi Soup &amp; Pounded Yam</h4>
+              <p>Rich egusi cooked with assorted meat and stockfish, served with smooth pounded yam.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Egusi%20Soup%20and%20Pounded%20Yam."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/fried-rice.jpg" alt="Fried rice served with turkey" loading="lazy" />
+              <span class="dish-price">₦5,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Fried Rice &amp; Turkey</h4>
+              <p>Colourful vegetable fried rice paired with tender, well-spiced turkey.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Fried%20Rice%20and%20Turkey."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pepper-soup.jpg" alt="Catfish pepper soup in a bowl" loading="lazy" />
+              <span class="dish-tag spicy">Spicy</span>
+              <span class="dish-price">₦4,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Catfish Pepper Soup</h4>
+              <p>Hot, aromatic pepper soup with fresh catfish and traditional spices.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Catfish%20Pepper%20Soup."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pounded-yam.jpg" alt="Pounded yam with efo riro vegetable soup" loading="lazy" />
+              <span class="dish-price">₦5,200</span>
+            </div>
+            <div class="dish-body">
+              <h4>Efo Riro &amp; Pounded Yam</h4>
+              <p>Rich Yoruba vegetable soup with assorted meat, served with pounded yam.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Efo%20Riro%20and%20Pounded%20Yam."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="nigerian">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/amala-ewedu.jpg" alt="Amala with ewedu and gbegiri soup" loading="lazy" />
+              <span class="dish-price">₦4,800</span>
+            </div>
+            <div class="dish-body">
+              <h4>Amala, Ewedu &amp; Gbegiri</h4>
+              <p>The classic combo — soft amala with ewedu and gbegiri, plus assorted meat.</p>
+              <div class="dish-meta">
+                <span class="cat">Nigerian</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Amala%20with%20Ewedu%20and%20Gbegiri."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== African ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="african">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/jollof-rice.jpg" alt="Ghanaian style jollof rice with chicken" loading="lazy" />
+              <span class="dish-tag">Chef's Special</span>
+              <span class="dish-price">₦5,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Ghanaian Jollof &amp; Chicken</h4>
+              <p>Fragrant Ghanaian-style jollof cooked with rich spices and served with chicken.</p>
+              <div class="dish-meta">
+                <span class="cat">African</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Ghanaian%20Jollof%20and%20Chicken."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="african">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/grilled-fish.jpg" alt="Whole grilled tilapia with pepper sauce" loading="lazy" />
+              <span class="dish-price">₦7,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Whole Grilled Tilapia</h4>
+              <p>Fresh tilapia marinated in African spices, grilled and served with pepper sauce.</p>
+              <div class="dish-meta">
+                <span class="cat">African</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Whole%20Grilled%20Tilapia."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="african">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pepper-soup.jpg" alt="Goat meat pepper soup" loading="lazy" />
+              <span class="dish-tag spicy">Spicy</span>
+              <span class="dish-price">₦4,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Goat Meat Pepper Soup</h4>
+              <p>Tender goat meat simmered in a bold, spicy broth with traditional herbs.</p>
+              <div class="dish-meta">
+                <span class="cat">African</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Goat%20Meat%20Pepper%20Soup."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="african">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/egusi-soup.jpg" alt="Egusi soup with semo and assorted meat" loading="lazy" />
+              <span class="dish-price">₦5,200</span>
+            </div>
+            <div class="dish-body">
+              <h4>Egusi &amp; Semo</h4>
+              <p>Hearty melon seed soup with assorted meat, served with smooth semolina.</p>
+              <div class="dish-meta">
+                <span class="cat">African</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Egusi%20and%20Semo."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Intercontinental ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="intercontinental">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pasta.jpg" alt="Creamy chicken pasta in a bowl" loading="lazy" />
+              <span class="dish-price">₦5,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Creamy Chicken Pasta</h4>
+              <p>Penne in a rich, creamy sauce with seasoned chicken and mixed vegetables.</p>
+              <div class="dish-meta">
+                <span class="cat">Intercontinental</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Creamy%20Chicken%20Pasta."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="intercontinental">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/burger.jpg" alt="Beef burger with fries" loading="lazy" />
+              <span class="dish-tag">Popular</span>
+              <span class="dish-price">₦6,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>BETH BITES Beef Burger</h4>
+              <p>Juicy beef patty, fresh vegetables and our special sauce, served with fries.</p>
+              <div class="dish-meta">
+                <span class="cat">Intercontinental</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Beef%20Burger."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="intercontinental">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/grilled-chicken.jpg" alt="Grilled chicken with vegetables" loading="lazy" />
+              <span class="dish-price">₦6,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Grilled Chicken &amp; Veggies</h4>
+              <p>Herb-marinated chicken grilled to perfection and served with sautéed vegetables.</p>
+              <div class="dish-meta">
+                <span class="cat">Intercontinental</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Grilled%20Chicken%20and%20Veggies."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="intercontinental">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/salad.jpg" alt="Fresh garden salad" loading="lazy" />
+              <span class="dish-price">₦3,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Fresh Garden Salad</h4>
+              <p>Crisp lettuce, tomatoes, cucumber, sweet corn and a light dressing.</p>
+              <div class="dish-meta">
+                <span class="cat">Intercontinental</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Garden%20Salad."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Pastries ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="pastries">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/pastries.jpg" alt="Meat pie and puff puff pastries" loading="lazy" />
+              <span class="dish-tag">Freshly Baked</span>
+              <span class="dish-price">₦1,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Meat Pie &amp; Puff Puff</h4>
+              <p>Golden meat pies and soft, sweet puff puff — baked fresh every morning.</p>
+              <div class="dish-meta">
+                <span class="cat">Pastries</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Meat%20Pie%20and%20Puff%20Puff."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="pastries">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/cake.jpg" alt="Celebration cake" loading="lazy" />
+              <span class="dish-price">₦18,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Celebration Cakes</h4>
+              <p>Custom birthday, wedding and anniversary cakes baked to order.</p>
+              <div class="dish-meta">
+                <span class="cat">Pastries</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Celebration%20Cake."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="pastries">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/small-chops.jpg" alt="Small chops party tray" loading="lazy" />
+              <span class="dish-tag">Party Favourite</span>
+              <span class="dish-price">₦12,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Small Chops Tray</h4>
+              <p>Puff puff, samosa, spring rolls, peppered gizzard and chicken wings.</p>
+              <div class="dish-meta">
+                <span class="cat">Pastries</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Small%20Chops%20Tray."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Drinks ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="drinks">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/juice.jpg" alt="Fresh fruit juice" loading="lazy" />
+              <span class="dish-price">₦2,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Fresh Fruit Juice</h4>
+              <p>Freshly squeezed orange, pineapple, watermelon or mixed fruit juice.</p>
+              <div class="dish-meta">
+                <span class="cat">Drinks</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Fresh%20Fruit%20Juice."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="drinks">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/smoothie.jpg" alt="Creamy fruit smoothie" loading="lazy" />
+              <span class="dish-price">₦2,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Creamy Smoothies</h4>
+              <p>Thick, refreshing smoothies blended with real fruit and yoghurt.</p>
+              <div class="dish-meta">
+                <span class="cat">Drinks</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Smoothie."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="drinks">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/zobo.jpg" alt="Chilled zobo drink" loading="lazy" />
+              <span class="dish-tag">Local Favourite</span>
+              <span class="dish-price">₦1,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Chilled Zobo &amp; Chapman</h4>
+              <p>Ice-cold zobo and classic Nigerian Chapman, served the way you like it.</p>
+              <div class="dish-meta">
+                <span class="cat">Drinks</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Zobo%20or%20Chapman."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Ice Cream ===== -->
+        <div class="col-md-6 col-lg-4 dish-col" data-category="icecream">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/icecream.jpg" alt="Creamy ice cream scoops" loading="lazy" />
+              <span class="dish-tag">Customer Favourite</span>
+              <span class="dish-price">₦2,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Ice Cream Cups &amp; Cones</h4>
+              <p>Creamy vanilla, chocolate, strawberry and mixed flavour ice cream.</p>
+              <div class="dish-meta">
+                <span class="cat">Ice Cream</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20Ice%20Cream."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="icecream">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/icecream.jpg" alt="Ice cream sundae with toppings" loading="lazy" />
+              <span class="dish-price">₦3,500</span>
+            </div>
+            <div class="dish-body">
+              <h4>Ice Cream Sundae</h4>
+              <p>Ice cream layered with chocolate sauce, nuts and fruit toppings.</p>
+              <div class="dish-meta">
+                <span class="cat">Ice Cream</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20an%20Ice%20Cream%20Sundae."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 dish-col" data-category="icecream">
+          <div class="bb-card">
+            <div class="dish-img">
+              <img src="static/images/icecream.jpg" alt="Milkshake topped with ice cream" loading="lazy" />
+              <span class="dish-price">₦3,000</span>
+            </div>
+            <div class="dish-body">
+              <h4>Thick Milkshakes</h4>
+              <p>Chocolate, vanilla or strawberry milkshakes blended extra thick.</p>
+              <div class="dish-meta">
+                <span class="cat">Ice Cream</span>
+                <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20order%20a%20Milkshake."
+                   target="_blank" rel="noopener" class="dish-order">Order <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="menu-empty" id="menuEmpty">
+        <i class="bi bi-search"></i>
+        <h4 class="h5">Nothing here yet</h4>
+        <p class="mb-0">Try another category, or message us on WhatsApp for today's full menu.</p>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <p class="text-muted mb-3" style="font-size:.92rem;">
+          Prices are a guide and may change. Ask us about today's specials, family
+          packs and bulk orders.
+        </p>
+        <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20Please%20send%20me%20your%20full%20menu%20and%20prices."
+           target="_blank" rel="noopener" class="btn btn-gold">
+          <i class="bi bi-whatsapp me-1"></i> Request Full Menu on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW DELIVERY WORKS ==================== -->
+  <section id="delivery">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">Home Delivery</span>
+        <h2>Hot Food, At Your Door</h2>
+        <div class="divider"></div>
+        <p>
+          Ordering from BETH BITES is simple. Four quick steps and your meal is on
+          its way anywhere within our Abuja delivery area.
+        </p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <h4>Choose Your Meal</h4>
+            <p>Browse our menu above and pick what you and your family are craving.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.1s;">
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <h4>Call or WhatsApp</h4>
+            <p>Send your order to <strong>0903 296 0035</strong> on a call or WhatsApp message.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.2s;">
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <h4>We Cook It Fresh</h4>
+            <p>Your order goes straight to the kitchen and is cooked fresh — not reheated.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 reveal" style="transition-delay:.3s;">
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <h4>Delivered Hot</h4>
+            <p>We package it carefully and bring it to your door, hot and on time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-banner reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h3 class="mb-3">Delivering Across Abuja From Wuse II</h3>
+            <p class="mb-4">
+              Our base is in <strong>Wuse II, Abuja, FCT</strong>, which means we can
+              reach most parts of the city quickly. Delivery fees depend on your
+              location and order size — message us and we will confirm straight away.
+            </p>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Hot, sealed packaging</div>
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Careful handling</div>
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Friendly delivery riders</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Bulk &amp; family packs</div>
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Office lunch runs</div>
+                <div class="badge-item"><i class="bi bi-check-circle-fill"></i> Same-day catering orders</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-lg-end">
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20a%20delivery%20order."
+               target="_blank" rel="noopener" class="btn btn-gold w-100 w-lg-auto mb-2 mb-lg-0">
+              <i class="bi bi-whatsapp me-1"></i> Start My Delivery Order
+            </a>
+            <a href="tel:+2349032960035" class="btn btn-ghost-light w-100 w-lg-auto">
+              <i class="bi bi-telephone-fill me-1"></i> 0903 296 0035
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CATERING PACKAGES ==================== -->
+  <section id="catering" style="background:#fff;">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">Events &amp; Catering</span>
+        <h2>Catering Packages For Every Occasion</h2>
+        <div class="divider"></div>
+        <p>
+          Planning something? We cook for weddings, birthdays, naming ceremonies,
+          office parties and get-togethers. Packages below are a guide — we will
+          tailor one to fit your guest count and budget.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 reveal">
+          <div class="package-card">
+            <h4>Small Chops Package</h4>
+            <p class="pkg-sub">Perfect for birthdays and small gatherings</p>
+            <div class="package-price">
+              ₦12,000 <small>starting from · serves 10 – 15 guests</small>
+            </div>
+            <ul class="pkg-list">
+              <li><i class="bi bi-check-circle-fill"></i> Puff puff &amp; chin chin</li>
+              <li><i class="bi bi-check-circle-fill"></i> Samosa &amp; spring rolls</li>
+              <li><i class="bi bi-check-circle-fill"></i> Peppered gizzard</li>
+              <li><i class="bi bi-check-circle-fill"></i> Chicken wings</li>
+              <li><i class="bi bi-check-circle-fill"></i> Neatly packed tray</li>
+            </ul>
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20enquire%20about%20the%20Small%20Chops%20Package."
+               target="_blank" rel="noopener" class="btn btn-bb-outline w-100">
+              Enquire Now
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal" style="transition-delay:.1s;">
+          <div class="package-card featured">
+            <h4>Party &amp; Event Package</h4>
+            <p class="pkg-sub">Our most requested catering option</p>
+            <div class="package-price">
+              ₦85,000 <small>starting from · serves 40 – 50 guests</small>
+            </div>
+            <ul class="pkg-list">
+              <li><i class="bi bi-check-circle-fill"></i> Choice of jollof or fried rice</li>
+              <li><i class="bi bi-check-circle-fill"></i> Chicken or turkey portions</li>
+              <li><i class="bi bi-check-circle-fill"></i> Moi moi &amp; fried plantain</li>
+              <li><i class="bi bi-check-circle-fill"></i> Salad &amp; small chops</li>
+              <li><i class="bi bi-check-circle-fill"></i> Chilled drinks included</li>
+              <li><i class="bi bi-check-circle-fill"></i> Serving trays &amp; dishes</li>
+            </ul>
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20enquire%20about%20the%20Party%20and%20Event%20Package."
+               target="_blank" rel="noopener" class="btn btn-bb w-100">
+              Enquire Now
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal" style="transition-delay:.2s;">
+          <div class="package-card">
+            <h4>Wedding &amp; Large Events</h4>
+            <p class="pkg-sub">Full catering for big celebrations</p>
+            <div class="package-price">
+              Custom <small>pricing · 100 guests and above</small>
+            </div>
+            <ul class="pkg-list">
+              <li><i class="bi bi-check-circle-fill"></i> Multiple rice &amp; soup options</li>
+              <li><i class="bi bi-check-circle-fill"></i> Nigerian, African &amp; Intercontinental</li>
+              <li><i class="bi bi-check-circle-fill"></i> Live cooking station available</li>
+              <li><i class="bi bi-check-circle-fill"></i> Pastries, drinks &amp; ice cream</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated serving team</li>
+              <li><i class="bi bi-check-circle-fill"></i> Free menu consultation</li>
+            </ul>
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20a%20custom%20quote%20for%20a%20large%20event."
+               target="_blank" rel="noopener" class="btn btn-bb-outline w-100">
+              Request a Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <p class="text-muted mb-3" style="font-size:.92rem;">
+          Need something different? Tell us your guest number, date and budget —
+          Chef Elizabeth will build a package around it.
+        </p>
+        <a href="contact.html" class="btn btn-bb">
+          <i class="bi bi-calendar-check me-1"></i> Book Your Event
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="bb-stats">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-lg-3 reveal">
+          <i class="bi bi-award"></i>
+          <div class="num"><span id="yearsCount" data-count="0" data-suffix="+">0</span></div>
+          <div class="label">Years of Service</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.1s;">
+          <i class="bi bi-egg-fried"></i>
+          <div class="num"><span data-count="50" data-suffix="+">0</span></div>
+          <div class="label">Dishes on Our Menu</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.2s;">
+          <i class="bi bi-emoji-smile"></i>
+          <div class="num"><span data-count="5000" data-suffix="+">0</span></div>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="col-6 col-lg-3 reveal" style="transition-delay:.3s;">
+          <i class="bi bi-truck"></i>
+          <div class="num"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="label">Delivery Commitment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-title text-center reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <div class="divider"></div>
+        <p>Quick answers to what customers ask us most. Still unsure? Just message us.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9 reveal">
+          <div class="accordion" id="bbFaq">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody1" aria-expanded="true" aria-controls="faqBody1">
+                  Do you deliver outside Wuse II?
+                </button>
+              </h2>
+              <div id="faqBody1" class="accordion-collapse collapse show"
+                   aria-labelledby="faqHead1" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  Yes. We are based in Wuse II, Abuja, and deliver to most parts of the
+                  city including Maitama, Garki, Wuse, Jabi, Utako, Gwarinpa, Life Camp
+                  and surrounding areas. Send us your address on WhatsApp and we will
+                  confirm delivery and the fee straight away.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody2" aria-expanded="false" aria-controls="faqBody2">
+                  How do I place an order?
+                </button>
+              </h2>
+              <div id="faqBody2" class="accordion-collapse collapse"
+                   aria-labelledby="faqHead2" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  The fastest way is to call or message <strong>0903 296 0035</strong> on
+                  WhatsApp. Send your order, your address and your preferred delivery
+                  time, and we will confirm everything with you before we start cooking.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody3" aria-expanded="false" aria-controls="faqBody3">
+                  How long does delivery take?
+                </button>
+              </h2>
+              <div id="faqBody3" class="accordion-collapse collapse"
+                   aria-labelledby="faqHead3" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  Most deliveries within central Abuja arrive within 35 – 60 minutes,
+                  depending on traffic and how busy the kitchen is. Because we cook
+                  fresh, please allow a little extra time for large or catering orders.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody4" aria-expanded="false" aria-controls="faqBody4">
+                  Can I order for a large event or party?
+                </button>
+              </h2>
+              <div id="faqBody4" class="accordion-collapse collapse"
+                   aria-labelledby="faqHead4" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  Absolutely — that is one of our specialities. We cater for weddings,
+                  birthdays, naming ceremonies, office parties and more. We recommend
+                  booking at least <strong>3 – 5 days ahead</strong> for large events so
+                  we can plan properly. See our catering packages above.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody5" aria-expanded="false" aria-controls="faqBody5">
+                  Do you make custom cakes and pastries?
+                </button>
+              </h2>
+              <div id="faqBody5" class="accordion-collapse collapse"
+                   aria-labelledby="faqHead5" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  Yes. We bake celebration cakes, meat pies, puff puff, chin chin and
+                  small chops trays to order. For custom cakes, please give us at least
+                  <strong>48 hours notice</strong> and share your design idea on WhatsApp.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqBody6" aria-expanded="false" aria-controls="faqBody6">
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div id="faqBody6" class="accordion-collapse collapse"
+                   aria-labelledby="faqHead6" data-bs-parent="#bbFaq">
+                <div class="accordion-body">
+                  We accept bank transfer and cash. For delivery orders we usually
+                  confirm payment before dispatch, and for catering we take a deposit
+                  to secure your date. Message us on WhatsApp for account details.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BAND ==================== -->
+  <section class="pt-0" style="background:#fff; padding-top:0;">
+    <div class="container">
+      <div class="bb-cta reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2 class="mb-2">Ready to Order? We're Ready to Cook.</h2>
+            <p class="mb-0">
+              Call or send us a WhatsApp message with what you would like, and we will
+              get it started right away. Dine in with us in Wuse II, Abuja, or have it
+              delivered hot to your door.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+               target="_blank" rel="noopener" class="btn btn-gold w-100 w-lg-auto mb-2 mb-lg-0">
+              <i class="bi bi-whatsapp me-1"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+2349032960035" class="btn btn-ghost-light w-100 w-lg-auto">
+              <i class="bi bi-telephone-fill me-1"></i> 0903 296 0035
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bb-footer">
+    <div class="container">
+      <div class="row g-5">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="brand-footer mb-3">
+            <span class="brand-beth">BETH</span> <span class="brand-bites">BITES</span>
+          </div>
+          <p class="mb-3">
+            Serving delicious Nigerian, African and Intercontinental dishes, pastries,
+            drinks and ice cream since 2016. Proudly based in Wuse II, Abuja, FCT,
+            Nigeria — with home delivery available.
+          </p>
+          <div class="footer-social d-flex gap-2">
+            <a href="https://www.tiktok.com/@BethBites" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.facebook.com/BethBites" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@Beth-Bites" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/2349032960035" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links mb-0">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="about.html">About Us</a></li>
+            <li class="mb-2"><a href="services.html">Services</a></li>
+            <li class="mb-2"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Get In Touch</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3 d-flex gap-2">
+              <i class="bi bi-telephone-fill"></i>
+              <span><a href="tel:+2349032960035">0903 296 0035</a><br />
+              <small class="text-muted">Calls &amp; WhatsApp</small></span>
+            </li>
+            <li class="mb-3 d-flex gap-2">
+              <i class="bi bi-envelope-fill"></i>
+              <span><a href="mailto:bethbites@gmail.com">bethbites@gmail.com</a></span>
+            </li>
+            <li class="d-flex gap-2">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Wuse II, Abuja,<br />FCT, Nigeria</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Opening Hours</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex justify-content-between mb-2">
+              <span>Monday – Friday</span><span class="text-white">8am – 9pm</span>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span>Saturday</span><span class="text-white">9am – 9pm</span>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span>Sunday</span><span class="text-white">12pm – 8pm</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+             target="_blank" rel="noopener" class="btn btn-bb btn-sm mt-3">
+            <i class="bi bi-bag-check me-1"></i> Place an Order
+          </a>
+        </div>
+
+      </div>
+
+      <div class="bb-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; <span id="bbYear">2026</span> BETH BITES. All rights reserved.</span>
+        <span>Owned &amp; led by <strong class="text-white">Elizabeth E.</strong> — CEO &amp; Senior Chef</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING BUTTONS ==================== -->
+  <a href="https://wa.me/2349032960035?text=Hello%20BETH%20BITES!%20I%27d%20like%20to%20place%20an%20order."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with BETH BITES on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================== INTERNAL JAVASCRIPT ===================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- 1. Dynamic footer year ---------- */
+      var yearEl = document.getElementById('bbYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      /* ---------- 2. Years of service (since 2016) ---------- */
+      var yearsEl = document.getElementById('yearsCount');
+      if (yearsEl) {
+        var years = new Date().getFullYear() - 2016;
+        yearsEl.dataset.count = years > 0 ? years : 1;
+      }
+
+      /* ---------- 3. Navbar shrink on scroll ---------- */
+      var nav = document.getElementById('bbNav');
+      var toTop = document.getElementById('toTop');
+
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 40);
+        if (toTop) toTop.classList.toggle('show', y > 400);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- 4. Back to top ---------- */
+      if (toTop) {
+        toTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ---------- 5. Close mobile menu after clicking a link ---------- */
+      var navCollapse = document.getElementById('bbNavMenu');
+      if (navCollapse) {
+        navCollapse.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (navCollapse.classList.contains('show')) {
+              var instance = bootstrap.Collapse.getInstance(navCollapse);
+              if (instance) instance.hide();
+            }
+          });
+        });
+      }
+
+      /* ---------- 6. Scroll reveal animation ---------- */
+      var revealItems = document.querySelectorAll('.reveal');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(function (el) { el.classList.add('active'); });
+      } else {
+        var revealObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        revealItems.forEach(function (el) { revealObserver.observe(el); });
+      }
+
+      /* ---------- 7. Animated number counters ---------- */
+      function animateCounter(el) {
+        var target = parseFloat(el.dataset.count) || 0;
+        var suffix = el.dataset.suffix || '';
+        var duration = 1600;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (startTime === null) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target.toLocaleString() + suffix;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      var counters = document.querySelectorAll('[data-count]');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        counters.forEach(function (el) {
+          el.textContent = (parseFloat(el.dataset.count) || 0).toLocaleString() + (el.dataset.suffix || '');
+        });
+      } else {
+        var counterObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        counters.forEach(function (el) { counterObserver.observe(el); });
+      }
+
+      /* ---------- 8. Menu category filter ---------- */
+      var filterButtons = document.querySelectorAll('#menuFilter .filter-btn');
+      var dishColumns   = document.querySelectorAll('#menuGrid .dish-col');
+      var emptyState    = document.getElementById('menuEmpty');
+
+      function applyFilter(filter) {
+        var visibleCount = 0;
+
+        dishColumns.forEach(function (col) {
+          var matches = (filter === 'all') || (col.dataset.category === filter);
+
+          if (matches) {
+            col.classList.remove('hide');
+            visibleCount++;
+          } else {
+            col.classList.add('hide');
+          }
+        });
+
+        if (emptyState) {
+          emptyState.classList.toggle('show', visibleCount === 0);
+        }
+      }
+
+      if (filterButtons.length && dishColumns.length) {
+        filterButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            // Update active state
+            filterButtons.forEach(function (b) {
+              b.classList.remove('active');
+              b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+
+            // Apply the filter
+            applyFilter(btn.dataset.filter || 'all');
+          });
+        });
+
+        // Initialise on page load
+        applyFilter('all');
+      }
+
+    })();
+  </script>
+</body>
+</html>
